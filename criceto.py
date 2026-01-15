@@ -1,9 +1,10 @@
 #trova quando il criceto muore
 import random
 giocatori=11
+lupi=2
 vivi=[True for people in range(giocatori)]
 #vivi=[True,True,True,True,True,True,True,True,True,True,True]
-#indice 0 è veggente 1 è criceto
+#indice 0 è veggente 1 è criceto gli ultimi sono lupi 
 def balottaggio():
     global vivi
 
@@ -25,7 +26,7 @@ def guardia():
 
     n_vivi=len(vivi)
     # parte da 0 
-    scelta=random.randint(0,n_vivi-1)
+    scelta=random.randint(0,n_vivi-1-lupi)
     return scelta==1 
 lupi()
 print(vivi)
